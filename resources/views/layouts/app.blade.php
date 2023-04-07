@@ -6,6 +6,7 @@
 <title>doctors-list</title>
 </head>
 <body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 @yield('content')
 </body>
 </html>

@@ -8,9 +8,8 @@
         </div>
         <div class="row">
         <div class="col-md-12" style="text-align: center; padding: 5%;">
-            <h4>Vous avez recherché la spécialité: {{$specialities[0]}}</h4>
+            <h4>Vous avez recherché un médecin situé dans le gouvernorat {{$governorats[0]}} et la ville de {{$ville}}.</h4>
         </div>
-        
         <a href="/" class="btn btn-primary" style="width: 15%; padding: 5px; margin: auto;">Retour</a>
     </div>
     <div class="row">
@@ -46,12 +45,13 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{ $medecins->appends(['specialite' => $specialities[0]])->links() }}
+                {{ $medecins->appends(['governorat' => $governorats[0], 'ville' => $ville])->links() }}
 
             </div>
         </div>
     </div>
 </div>
+
 
 @endsection
 
