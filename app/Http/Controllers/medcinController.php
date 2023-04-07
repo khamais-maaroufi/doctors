@@ -39,5 +39,12 @@ $medecins = Medecin::whereHas('adresse', function ($query) use ($ville) {
   return view('medecins.ville', compact('medecins','governorats', 'ville'));
 }
 
+public function search(Request $request)
+{
+    $nom_docteur = $request->input('nom_docteur');
+  $medecins = Medecin::where('nom_docteur', 'like', '%' . $nom_docteur . '%')->paginate(10);
+
+    return view('medecins.search', compact('medecins', 'nom_docteur'));
+}
 
 }

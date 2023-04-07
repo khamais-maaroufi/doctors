@@ -17,7 +17,7 @@
         @endforeach
       </select>
 </div>
-      <button id="batwn" type="submit" style="margin-top: 5px; border-radius: 5px; padding: 5px; width: 15%; border: none; background-color: black; color:white;">Filtrer</button>
+      <button type="submit" style="margin-top: 5px; border-radius: 5px; padding: 5px; width: 15%; border: none; background-color: black; color:white;">Filtrer</button>
     </form> 
     <form method="GET" action="{{ route('medecins.ville') }}" style="height: 20vh; display: flex; flex-direction: column; justify-content: space-evenly; margin-top: 5%;">
     <div style=" display: flex; flex-direction: column; justify-content: space-evenly;"><label for="governorat">Governorat:</label>
@@ -35,6 +35,13 @@
        
         <button type="submit" style="margin-top: 5px; border-radius: 5px; padding: 5px; width: 15%; border: none; background-color: black; color:white;">Filtrer</button>
     </form>
+    <form method="GET" action="{{ route('medecin.search') }}" style="margin-top: 5%;" class="d-flex align-items-center justify-content-center">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Entrez le nom du médecin" name="nom_docteur">
+        <button type="submit" class="btn btn-primary ms-2">Rechercher</button>
+    </div>
+</form>
+
  </div>      
    
     </div>
