@@ -6,7 +6,6 @@
         <div class="col-md-12">
             <h2>Doctors List</h2>
         </div>
-       
         <form method="POST" action="{{ route('medecins.specialite') }}">
        @csrf
   <label for="specialite">Specialite:</label>
@@ -17,7 +16,7 @@
     @endforeach
   </select>
   <button type="submit">Filtrer</button>
-</form> 
+</form>  
 
     </div>
     <div class="row">
@@ -59,4 +58,3 @@
     </div>
 </div>
 @endsection
-

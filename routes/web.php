@@ -20,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\medcinController::class, 'index']
 )->name('medcin.index');
+
+Route::post('/medecins/specialite', [App\Http\Controllers\medcinController::class, 'showBySpecialite'])->name('medecins.specialite');
